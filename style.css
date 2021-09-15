@@ -1,13 +1,21 @@
-.header-left{
-    border: solid black;
-    width: 50%;
-}
-
-.header-left img{
-    height: 100%;
-}
-
-.header-right{
-    border: solid green;
-    width: 50%;
-}
+header{
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 4px solid black;
+  }
+  
+  .header-left{
+      position: absolute;
+      width: 50%;
+  }
+  
+  .header-left img{
+      height: 115px;
+  }
+  
+  .header-right{
+      position: relative;
+    position: relative;
+    right: 0px;
+    text-align: center;
+  }
