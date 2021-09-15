@@ -1,0 +1,13 @@
+.header-left{
+    border: solid black;
+    width: 50%;
+}
+
+.header-left img{
+    height: 100%;
+}
+
+.header-right{
+    border: solid green;
+    width: 50%;
+}
