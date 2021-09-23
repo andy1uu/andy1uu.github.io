@@ -5,27 +5,40 @@ header{
     border-bottom: 4px solid black;
     overflow: hidden;
     align-content: center;
-  }
+}
   
-  .header-section{
+.header-section{
     float: left;
-  }
+}
 
-  .header-left{
+.header-left{
       height: 150px;
-  }
+}
   
-  .header-left img{
+.header-left img{
       height: 100%;
-  }
+}
   
-  .header-middle{
+.header-middle{
     text-align: center;
     height: 150px;
     align-self: center;
-  }
+}
 
-  .header-right{
+.menu-bar-item {
+
+    float: left;
+    color: black;
+    margin: 5px;
+    padding: 2px;
+    font-size: 1.2em;
+    text-decoration: none;
+    background-color: green;
+    border: 1px solid black;
+  
+}
+
+.header-right{
     text-align: right;
     height: 150px;
-  }
+}
