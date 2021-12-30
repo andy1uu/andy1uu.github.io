@@ -3,6 +3,7 @@ const header = document.querySelector(".header");
 const body = document.querySelector("body");
 const overlay = document.querySelector(".overlay");
 const fadeElements = document.querySelectorAll(".has-fade");
+const menuLinks = document.querySelectorAll(".menu-link");
 
 menuButton.addEventListener("click", function(){
 
@@ -15,7 +16,6 @@ menuButton.addEventListener("click", function(){
             element.classList.add("fade-out");
         });
 
-
     }
     else{ // Open Menu
 
@@ -26,4 +26,15 @@ menuButton.addEventListener("click", function(){
             element.classList.remove("fade-out");
         }); 
     }
-})
+});
+
+menuLinks.forEach(item => {
+    item.addEventListener('click', event => {
+        body.classList.remove("noscroll");
+        header.classList.remove("open");
+        fadeElements.forEach(function(element){
+            element.classList.remove("fade-in");
+            element.classList.add("fade-out");
+        });
+    });
+  });

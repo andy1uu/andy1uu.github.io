@@ -1,83 +1,3 @@
-@media (min-width: 64em) {
-  .hero {
-    min-height: 41rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.hero__image {
-  position: relative;
-  background-image: url("/Images/andy-luu.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 27.5rem;
-  /*         &::before {
-
-            content: "";
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            background-image: url("/Images/andy-luu.jpg");
-            background-size: 93%;
-            background-repeat: no-repeat;
-            background-position: center center;
-        } */
-}
-
-@media (min-width: 64em) {
-  .hero__image {
-    -webkit-box-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    min-height: 41rem;
-    background-image: url("/Images/andy-luu.jpg");
-    background-position: center center;
-  }
-}
-
-.hero__text {
-  text-align: center;
-}
-
-.hero__text h1 {
-  font-weight: 300;
-  color: green;
-  line-height: 1.15;
-  font-size: 2.31rem;
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 64em) {
-  .hero__text h1 {
-    font-size: 3.25rem;
-  }
-}
-
-.hero__text p {
-  line-height: 1.5;
-  margin-bottom: 2.25rem;
-}
-
-@media (min-width: 64em) {
-  .hero__text {
-    -webkit-box-flex: 2;
-        -ms-flex: 2;
-            flex: 2;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-}
-
 .has-fade {
   visibility: hidden;
 }
@@ -171,6 +91,7 @@ body {
   font-weight: 300;
   color: green;
   font-size: 1.125rem;
+  min-height: 300vh;
 }
 
 body.noscroll {
@@ -179,6 +100,38 @@ body.noscroll {
 
 h1, h2, h3 {
   margin-top: 0;
+  font-weight: 300;
+  color: green;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 2.31rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3.25rem;
+  }
+}
+
+h2 {
+  font-size: 1.875rem;
+  margin-bottom: 1.5625rem;
+}
+
+@media (min-width: 64em) {
+  h2 {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 2.25rem;
+  color: gray;
 }
 
 a, a:visited, a:hover {
@@ -191,15 +144,31 @@ a, a:visited, a:hover {
 }
 
 .container--pall {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
+@media (min-width: 64em) {
+  .container--pall {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
 .container--py {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--py {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .container--px {
@@ -216,11 +185,23 @@ a, a:visited, a:hover {
 }
 
 .container--pt {
-  padding-top: 2.25rem;
+  padding-top: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pt {
+    padding-top: 6rem;
+  }
 }
 
 .container--pb {
-  padding-bottom: 2.25rem;
+  padding-bottom: 4.375rem;
+}
+
+@media (min-width: 64em) {
+  .container--pb {
+    padding-bottom: 6rem;
+  }
 }
 
 .flex {
@@ -248,14 +229,14 @@ a, a:visited, a:hover {
 }
 
 button, .button {
+  position: relative;
   display: inline-block;
   padding: 1rem 1.875rem;
   border-radius: 25px;
   border: 0px;
   cursor: pointer;
-  background: -webkit-gradient(linear, left top, right top, from(limeGreen), to(green));
-  background: linear-gradient(to right, limeGreen, green);
-  color: white;
+  background-image: -webkit-gradient(linear, left top, right top, from(limeGreen), to(green));
+  background-image: linear-gradient(to right, limeGreen, green);
   font-weight: 400;
   font-size: 0.875rem;
   color: white;
@@ -263,8 +244,21 @@ button, .button {
   transition: opacity 300ms ease-in-out;
 }
 
-button:hover, .button:hover {
-  opacity: 0.5;
+button::before, .button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+button:hover::before, .button:hover::before {
+  opacity: 1;
 }
 
 @media (max-width: 63.9375em) {
@@ -300,6 +294,7 @@ button:hover, .button:hover {
 }
 
 .header__menu {
+  z-index: 1;
   background: white;
   padding: 1.625rem;
   border-radius: 10px;
@@ -355,6 +350,7 @@ button:hover, .button:hover {
 }
 
 .header .overlay {
+  z-index: 1;
   opacity: 0;
   position: fixed;
   top: 0px;
@@ -366,6 +362,7 @@ button:hover, .button:hover {
 }
 
 .header nav {
+  z-index: 2;
   padding-top: 1.0625rem;
   padding-bottom: 1.0625rem;
   position: relative;
@@ -388,5 +385,276 @@ button:hover, .button:hover {
 .header.open .header__toggle span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+@media (min-width: 64em) {
+  .hero {
+    min-height: 41rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.hero__image {
+  position: relative;
+  background-image: url("/Images/andy-luu.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 27.5rem;
+  /*         &::before {
+
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-image: url("/Images/andy-luu.jpg");
+            background-size: 93%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        } */
+}
+
+@media (min-width: 64em) {
+  .hero__image {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    min-height: 41rem;
+    background-image: url("/Images/andy-luu.jpg");
+    background-position: center center;
+  }
+}
+
+.hero__text {
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .hero__text {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.experience {
+  background-color: lightgreen;
+}
+
+@media (max-width: 63.9375em) {
+  .experience__intro {
+    text-align: center;
+  }
+}
+
+@media (min-width: 64em) {
+  .experience__intro {
+    width: 60%;
+    margin-bottom: 3.75rem;
+  }
+}
+
+.experience__item {
+  padding: 0.9375rem;
+  border-radius: 25px;
+  -webkit-box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.experience__item:hover {
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+.experience__icon {
+  margin-bottom: 1.875rem;
+}
+
+@media (min-width: 64em) {
+  .experience__icon {
+    margin-bottom: 2.75rem;
+  }
+}
+
+.experience__title {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.15;
+  color: green;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 64em) {
+  .experience__title {
+    font-size: 1.5rem;
+    margin-bottom: 2.125rem;
+  }
+}
+
+.experience__description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.footer {
+  background-color: darkslategray;
+  color: white;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .footer .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr 1fr 3fr;
+        grid-template-columns: 2fr 1fr 1fr 3fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+    justify-items: start;
+    gap: 1rem;
+  }
+}
+
+.footer a {
+  color: white;
+}
+
+.footer__logo {
+  display: inline-block;
+}
+
+@media (max-width: 63.9375em) {
+  .footer__logo {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__logo {
+    grid-area: logo;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__social {
+    grid-area: social;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
+.footer__social a {
+  display: inline-block;
+}
+
+.footer__social a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 64em) {
+  .footer__links {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer__links a {
+  line-height: 2.25rem;
+}
+
+.footer__links a:hover {
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  color: green;
+}
+
+@media (min-width: 64em) {
+  .footer__links.col1 {
+    grid-area: links1;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__links.col2 {
+    grid-area: links2;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .footer__links.col2 {
+    margin-bottom: 1.875rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__cta {
+    grid-area: cta;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    text-align: right;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .footer__cta a.button {
+    margin-bottom: 1.875rem;
+  }
+}
+
+.footer__copyright {
+  font-size: 0.9375rem;
+}
+
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
 }
 /*# sourceMappingURL=style.css.map */
