@@ -1,5 +1,7 @@
 .header {
 
+    background: linear-gradient(palegreen, white);
+
     &__logo {
         img {
             width:8.8125rem;
@@ -26,7 +28,7 @@
 
     &__menu {
         z-index: 1;
-        background: white;
+        background: palegreen;
         padding: 1.625rem;
         border-radius: 10px;
         width: calc(100% - 3rem);
@@ -96,7 +98,6 @@
         padding-top: 1.0625rem;   
         padding-bottom: 1.0625rem;
         position: relative;
-        background-color: white;
     }
 
     // Menu open styles

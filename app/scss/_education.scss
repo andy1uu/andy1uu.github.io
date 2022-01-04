@@ -1,4 +1,4 @@
-.experience {
+.education {
 
     &__intro {
         @include breakpoint-down(medium){
@@ -27,9 +27,9 @@
 
         display: grid;
         grid-template-areas: 
-        "picture location__time"
+        "picture location__time__gpa"
         "title title"
-        "company company"
+        "major major"
         "description description";
     }
     
@@ -50,9 +50,9 @@
 
     }
 
-    &__company {
+    &__major {
 
-        grid-area: company;
+        grid-area: major;
         font-size: 1.5rem;
         font-weight: 400;
         font-style: italic;
@@ -60,8 +60,8 @@
         color: lightgreen;
     }
 
-    &__location__time {
-        grid-area: location__time;
+    &__location__time__gpa {
+        grid-area: location__time__gpa;
         line-height: 2rem;
         text-align: right;
         a {
@@ -85,13 +85,5 @@
             list-style-type: 	
             "\27A3";
         }
-        .contact{
-            color: green;
-            font-weight: 400;
-            a {
-                color:lightgreen;
-            }
-        }
-        
     }
 }
