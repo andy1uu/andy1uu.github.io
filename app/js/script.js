@@ -1,7 +1,6 @@
 const menuButton = document.querySelector("#menuButton");
 const header = document.querySelector(".header");
 const body = document.querySelector("body");
-const overlay = document.querySelector(".overlay");
 const fadeElements = document.querySelectorAll(".has-fade");
 const menuLinks = document.querySelectorAll(".menu-link");
 
@@ -15,7 +14,6 @@ menuButton.addEventListener("click", function(){
             element.classList.remove("fade-in");
             element.classList.add("fade-out");
         });
-
     }
     else{ // Open Menu
 

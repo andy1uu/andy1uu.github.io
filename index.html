@@ -5,6 +5,9 @@
   <meta name = "viewpoint" content = "width = device-width, initial-scale = 1.0">
   <meta name = "description" content="A personal website made using HTML/CSS/JS to learn web development.">
   <meta name = "author" content = "Andy Luu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   <title>Andy Luu | Professional Website</title>
 
@@ -18,7 +21,7 @@
 </head>
 
 <body>
-  <header class = "header">
+<!--   <header class = "header">
     <div class = "overlay has-fade"></div>
     <nav class = "container container--pall flex flex-jc-sb flex-ai-c">
       <a href = "/" class = "header__logo">
@@ -54,6 +57,45 @@
 
     </div>
 
+  </header> -->
+
+  <header class = "header">
+
+    <div class = "overlay hide-for-desktop has-fade">
+
+    </div>
+
+    <nav class = "container flex flex-jc-sb flex-ai-c">
+      <a href="/" class = "header__logo">
+        <img src="Images/" alt="Logo">
+      </a>
+
+      <a id = "menuButton" href="#" class = "header__menu__button hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <div class="header__links hide-for-mobile">
+        <a href="/">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#organizations">Organizations</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <a href = "https://github.com/Andy1uu" class = "header__cta button hide-for-mobile">Github</a>
+    </nav>
+
+    <div class="header__menu hide-for-desktop has-fade">
+      <a href="/">Home</a>
+      <a href="#experience" class = "menu-link">Experience</a>
+      <a href="#education" class = "menu-link">Education</a>
+      <a href="#projects" class = "menu-link">Projects</a>
+      <a href="#organizations" class = "menu-link">Organizations</a>
+      <a href="#contact" class = "menu-link">Contact</a>
+    </div>
   </header>
 
   <section class = "hero container">
@@ -92,7 +134,7 @@
       <div class = "experience__grid">
         
         <div class="experience__item" id = "uta">
-          <a href="https://cs.vt.edu/"><img src="/Images/" alt= "VT CS Website" class="experience__icon"></a>
+          <a href="https://cs.vt.edu/"><img src="/Images/virginia-tech.svg" alt= "VT CS Website" class="experience__icon"></a>
           <div class="experience__title">
               Undergraduate Teaching Assistant
           </div>
@@ -146,7 +188,7 @@
           </div>
         </div>
         <div class="experience__item" id = "kft">
-          <a href="https://kungfutea.com/"><img src="/Images/" alt="Kung Fu Tea" class="experience__icon"></a>
+          <a href="https://kungfutea.com/"><img src="/Images/kung-fu-tea.svg" alt="Kung Fu Tea" class="experience__icon"></a>
           <div class="experience__title">
             Shift Lead/Barista
           </div>
@@ -201,7 +243,7 @@
       <div class = "education__grid">
         
         <div class="education__item" id = "Virginia Tech">
-          <a href="https://vt.edu/"><img src="/Images/" alt="Virginia Tech" class="experience__icon"></a>
+          <a href="https://vt.edu/"><img src="/Images/virginia-tech.svg" alt="Virginia Tech" class="experience__icon"></a>
           <a href="https://vt.edu/" class="education__title">
             Virginia Polytechnic Institute and State University (Virginia Tech)
           </a>
@@ -221,7 +263,8 @@
           <div class="experience__description">
             <h3 class = "title">Relevant Coursework: </h3> 
             <ul class = "description">
-              <li></li>
+              <li>In-Major Classes: </li>
+              <li>Other Classes: </li>
             </ul>
           </div>
         </div>
@@ -266,8 +309,8 @@
   
       <div class="footer__links col1">
   
-        <a href = "">Home</a>
-        <a href = "#experiences">Experiences</a>
+        <a href = "/">Home</a>
+        <a href = "#experience">Experience</a>
         <a href = "#education">Education</a>
   
       </div>
