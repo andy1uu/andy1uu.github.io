@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Andy Luu's Personal Website made with React.js, Tailwind CSS, and Typescript Templates.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
