@@ -8,6 +8,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    [WORK IN PROGRESS] Andy Luu's React Website
   </React.StrictMode>
 );
 
