@@ -6,6 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 
 // Component Import Statements
 import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Education from "./components/Education";
+import Experiences from "./components/Experiences";
+import Awards from "./components/Awards";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 type Link = {
@@ -19,8 +26,28 @@ const headerLinks: Link[] = [
     url: "#",
   },
   {
-    label: "Footer",
-    url: "#Footer",
+    label: "Education",
+    url: "#Education",
+  },
+  {
+    label: "Work Experience",
+    url: "#Experiences",
+  },
+  {
+    label: "Awards",
+    url: "#Awards",
+  },
+  {
+    label: "Skills",
+    url: "#Skills",
+  },
+  {
+    label: "Projects",
+    url: "#Projects",
+  },
+  {
+    label: "Contact",
+    url: "#Contact",
   },
 ];
 
@@ -33,6 +60,13 @@ root.render(
     <Header 
       headerLinks={headerLinks}
     ></Header>
+    <Hero></Hero>
+    <Education></Education>
+    <Experiences></Experiences>
+    <Awards></Awards>
+    <Skills></Skills>
+    <Projects></Projects>
+    <Contact></Contact>
     <Footer></Footer>
   </React.StrictMode>
 );
