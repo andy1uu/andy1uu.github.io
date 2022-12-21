@@ -1,14 +1,73 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/index.css';
-import reportWebVitals from './reportWebVitals';
+// Base Import Statements
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles/index.css";
+import reportWebVitals from "./reportWebVitals";
+
+// Component Import Statements
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Education from "./components/Education";
+import Experiences from "./components/Experiences";
+import Awards from "./components/Awards";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
+type Link = {
+  label: string;
+  url: string;
+};
+
+const headerLinks: Link[] = [
+  {
+    label: "Home",
+    url: "#",
+  },
+  {
+    label: "Education",
+    url: "#Education",
+  },
+  {
+    label: "Work Experience",
+    url: "#Experiences",
+  },
+  {
+    label: "Awards",
+    url: "#Awards",
+  },
+  {
+    label: "Skills",
+    url: "#Skills",
+  },
+  {
+    label: "Projects",
+    url: "#Projects",
+  },
+  {
+    label: "Contact",
+    url: "#Contact",
+  },
+];
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    
+    <Header 
+      headerLinks={headerLinks}
+    ></Header>
+    <Hero></Hero>
+    <Education></Education>
+    <Experiences></Experiences>
+    <Awards></Awards>
+    <Skills></Skills>
+    <Projects></Projects>
+    <Contact></Contact>
+    <Footer></Footer>
   </React.StrictMode>
 );
 
