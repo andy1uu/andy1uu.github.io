@@ -1,7 +1,7 @@
 {
+  "homepage": "https://andy1uu.github.io",
   "name": "andy1uu.github.io",
   "version": "1.0.0",
-  "homepage": "https://andy1uu.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -12,18 +12,18 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "autoprefixer": "^10.4.11",
-    "gh-pages": "^4.0.0",
     "postcss": "^8.4.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-paginate": "^8.1.4",
     "react-scripts": "5.0.1",
+    "serve": "^14.1.2",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "predeploy": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -49,8 +49,8 @@
     ]
   },
   "devDependencies": {
-    "@endemolshinegroup/cz-jira-smart-commit": "^1.3.1",
     "cz-jira-smart-commit": "^3.0.0",
+    "gh-pages": "^4.0.0",
     "tailwindcss": "^3.2.4"
   },
   "config": {
