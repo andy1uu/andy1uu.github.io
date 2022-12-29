@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/index.css";
 import reportWebVitals from "./reportWebVitals";
+import { FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 // Component Import Statements
 import Header from "./components/Header";
@@ -15,10 +16,20 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+// Types
 type Link = {
   label: string;
   url: string;
 };
+
+type IconLink = {
+  label: string;
+  url: string;
+  icon: JSX.Element;
+};
+
+// Constants
+const name = "Andy Luu";
 
 const headerLinks: Link[] = [
   {
@@ -51,14 +62,43 @@ const headerLinks: Link[] = [
   },
 ];
 
+const footerIcons: IconLink[] = [
+  {
+    label: "Email",
+    url: "mailto:andyluu324@gmail.com",
+    icon: <FaEnvelope size={40}/>,
+  },
+  {
+    label: "Facebook",
+    url: "https://www.facebook.com/andy1uu/",
+    icon: <FaFacebook size={40}/>,
+  },
+  {
+    label: "GitHub",
+    url: "https://github.com/Andy1uu",
+    icon: <FaGithub size={40}/>,
+  },
+  {
+    label: "Instagram",
+    url: "https://www.instagram.com/andy.1uu/",
+    icon: <FaInstagram size={40}/>,
+  },
+  {
+    label: "LinkedIn",
+    url: "https://www.linkedin.com/in/andyluu324",
+    icon: <FaLinkedin size={40}/>,
+  },
+];
+
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
 root.render(
   <React.StrictMode>
+    <div className="Root bg-brand-secondary">
     <Header 
-      headerLinks={headerLinks}
+      headerLinks = {headerLinks}
     ></Header>
     <Hero></Hero>
     <Education></Education>
@@ -67,7 +107,11 @@ root.render(
     <Skills></Skills>
     <Projects></Projects>
     <Contact></Contact>
-    <Footer></Footer>
+    <Footer
+      name = {name}
+      footerIcons = {footerIcons}
+    ></Footer>
+  </div>
   </React.StrictMode>
 );
 
