@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.267bcd26.css",
-    "main.js": "/static/js/main.b2db4820.js",
-    "static/js/787.e865e73b.chunk.js": "/static/js/787.e865e73b.chunk.js",
-    "static/media/logo2048.png": "/static/media/logo2048.9c31bd17f2f4cbdda538.png",
-    "index.html": "/index.html",
-    "main.267bcd26.css.map": "/static/css/main.267bcd26.css.map",
-    "main.b2db4820.js.map": "/static/js/main.b2db4820.js.map",
-    "787.e865e73b.chunk.js.map": "/static/js/787.e865e73b.chunk.js.map"
+    "main.css": "/andy1uu.github.io/static/css/main.880001ea.css",
+    "main.js": "/andy1uu.github.io/static/js/main.26f43078.js",
+    "static/js/787.e865e73b.chunk.js": "/andy1uu.github.io/static/js/787.e865e73b.chunk.js",
+    "static/media/logo2048.png": "/andy1uu.github.io/static/media/logo2048.9c31bd17f2f4cbdda538.png",
+    "index.html": "/andy1uu.github.io/index.html",
+    "main.880001ea.css.map": "/andy1uu.github.io/static/css/main.880001ea.css.map",
+    "main.26f43078.js.map": "/andy1uu.github.io/static/js/main.26f43078.js.map",
+    "787.e865e73b.chunk.js.map": "/andy1uu.github.io/static/js/787.e865e73b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.267bcd26.css",
-    "static/js/main.b2db4820.js"
+    "static/css/main.880001ea.css",
+    "static/js/main.26f43078.js"
   ]
 }
