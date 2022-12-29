@@ -25,7 +25,7 @@ const Header = (props: headerProps) => {
   // Generating all the nav links
   const links = headerLinks.map((link) => (
     <a href={link.url} onClick={ToggleNav} key={link.label}>
-      <div className="Header-Link text-lg font-semibold w-full pt-4 pb-4 pl-4 hover:bg-brand-tertiary hover:border-2 hover:rounded-xl">
+      <div className="Header-Link text-lg font-semibold w-full pt-4 pb-4 pl-4 hover:bg-brand-tertiary hover:border-2 hover:rounded-xl" >
         {link.label}
       </div>
     </a>
@@ -46,7 +46,7 @@ const Header = (props: headerProps) => {
             Andy Luu
         </div>
         <div className={"Header-Links order-4 w-full md:flex md:order-2 " + 
-        (isNavActive ? "ml-0 mt-14 absolute bg-brand-primary border-4 border-brand-primary rounded-b-xl" : "hidden")}>
+        (isNavActive ? "ml-0 mt-12 absolute bg-brand-primary border-4 border-brand-primary rounded-b-xl md:static md:mt-0" : "hidden")}>
           {links}
         </div>
         <div className="Header-ImageContainer order-3 w-1/4 mt-auto mb-auto">
