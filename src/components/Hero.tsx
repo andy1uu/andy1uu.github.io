@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/components/Hero.css";
+import { getUsers } from "../api/test";
 
 /* type Link = {
   label: string;
@@ -15,7 +16,8 @@ const Hero = (props: heroProps) => {
   return (
     <div id="Hero" className="Hero">
       <div className="Hero-container border-brand-tertiary border border-dashed border-8 text-center h-96 text-brand-primary">
-        [WIP] Hero Component
+        <button onClick={() => getUsers()}>CLICK ME</button>
+        
       </div>
     </div>
   )
