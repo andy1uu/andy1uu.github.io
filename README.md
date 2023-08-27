@@ -1,5 +1,7 @@
 # Andy Luu's Personal Website made with React.js, Tailwind CSS, and Typescript Templates. 
 
+[![pages-build-deployment](https://github.com/andy1uu/andy1uu.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/andy1uu/andy1uu.github.io/actions/workflows/pages/pages-build-deployment)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
