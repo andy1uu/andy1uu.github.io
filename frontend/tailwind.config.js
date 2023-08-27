@@ -6,13 +6,19 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      colors:{
-        text: "#0c2711",
-        background: "#fbfefc",
-        primary: "#2c8c3e",
-        secondary: "#d8f3dd",
-        accent: "#3dc256",
-      }
+      colors: {
+        darkText: "#041a10",
+        lightText: "#f5f5f5",
+        darkBackground: "#041a10",
+        lightBackground: "#f5f5f5",
+        primary: "#1db954",
+        secondary: "#f5f5f5",
+        tertiary: "#32cc8c",
+      },
+    },
+    fontFamily: {
+      primary: ["Rubik", "sans-serif"],
+      secondary: ["Comfortaa", "sans-serif"],
     },
   },
   variants: {

@@ -1,0 +1,55 @@
+import SocialIcon from "./SocialIcon";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaFacebook,
+  FaInstagram,
+} from "react-icons/fa6";
+
+const HomePage = () => {
+  return (
+    <div className="HomePage flex flex-col">
+      <div className="HomePage-TextContainer flex flex-col p-8">
+        <div className="HomePage-Title text-lg font-medium mb-8">
+          <div className="HomePage-TitleIntro">Hey, I'm</div>
+          <div className="HomePage-TitleName text-6xl text-primary">
+            Andy Luu
+          </div>
+        </div>
+        <div className="HomePage-Headline text-2xl mb-4">
+          A Graduate Researcher & Software Developer.
+        </div>
+        <div className="HomePage-Description leading-8 mb-4">
+          I am a first-year graduate student studying Computer Science planning
+          on graduating in May 2024 with a Master's of Science. I am currently
+          seeking summer internships or full time opportunities.
+        </div>
+        <div className="HomePage-SocialsContainer flex flex-wrap justify-evenly">
+          <SocialIcon
+            icon={<FaGithub size={36} />}
+            link="https://github.com/andy1uu"
+          />
+          <SocialIcon
+            icon={<FaLinkedinIn size={36} />}
+            link="https://www.linkedin.com/in/andyluu324/"
+          />
+          <SocialIcon
+            icon={<FaFacebook size={36} />}
+            link="https://www.facebook.com/andy1uu"
+          />
+          <SocialIcon
+            icon={<FaInstagram size={36} />}
+            link="https://www.instagram.com/andy.1uu/"
+          />
+        </div>
+      </div>
+      <img
+        className="HomePage-Image flex mx-auto h-64 w-64 mb-4"
+        src="/images/Andy_Luu_Profile_Picture.png"
+        alt="Andy Luu Profile Picture"
+      />
+    </div>
+  );
+};
+
+export default HomePage;
