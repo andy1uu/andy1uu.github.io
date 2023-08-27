@@ -7,19 +7,16 @@ import Footer from "./common/Footer/Footer";
 import HomePage from "./HomePage/HomePage";
 
 const App = () => {
-
-  const buildPage = (page: React.ReactElement) => {
-    return (
-      <div className="Body flex w-full h-screen font-primary text-text">
-        <NavBar />
-        <div className="PageContainer flex flex-col w-full bg-lightBackground text-darkText overflow-auto">
-          <Header />
-          {page}
-          <Footer />
-        </div>
+  const buildPage = (page: React.ReactElement) => (
+    <div className="Body text-text flex h-screen w-full font-primary">
+      <NavBar />
+      <div className="PageContainer flex w-full flex-col overflow-auto bg-lightBackground text-darkText">
+        <Header />
+        {page}
+        <Footer />
       </div>
-    );
-  };
+    </div>
+  );
 
   return (
     <BrowserRouter>

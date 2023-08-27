@@ -1,9 +1,9 @@
-const Footer = () => {
-  return (
-    <div className="Footer flex justify-center w-full mt-auto">
-      &copy; 2023 Andy Luu. All Rights Reserved.
-    </div>
-  );
-};
+import * as React from "react";
+
+const Footer = () => (
+  <div className="Footer mt-auto flex w-full justify-center">
+    &copy; 2023 Andy Luu. All Rights Reserved.
+  </div>
+);
 
 export default Footer;

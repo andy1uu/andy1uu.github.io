@@ -18,7 +18,6 @@ module.exports = {
     },
     fontFamily: {
       primary: ["Rubik", "sans-serif"],
-      secondary: ["Comfortaa", "sans-serif"],
     },
   },
   variants: {
