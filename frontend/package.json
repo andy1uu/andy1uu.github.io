@@ -1,6 +1,10 @@
 {
-  "name": "andy1uu.github.io",
+  "name": "frontend",
   "version": "1.0.0",
+  "description": "The frontend for Andy Luu's Personal Website.",
+  "repository": "https://github.com/andy1uu/andy1uu.github.io",
+  "author": "Andy Luu (andy1uu)",
+  "license": "MIT",
   "private": true,
   "homepage": "https://andy1uu.github.io/",
   "dependencies": {
