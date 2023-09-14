@@ -21,7 +21,7 @@ const HomePage = () => (
       </div>
       <div className="HomePage-Description mb-4 leading-8 lg:mb-8 lg:text-lg xl:mb-12">
         {
-          "I am a first-year graduate student studying Computer Science planning on graduating in May 2024 with a Master's of Science. I am currently seeking summer internships or full time opportunities."
+          "I am a first-year graduate student studying Computer Science planning on graduating in December 2024 with a Master's of Science. I am currently seeking summer internships or full time opportunities."
         }
       </div>
       <div className="HomePage-SocialsContainer flex flex-wrap justify-evenly">
