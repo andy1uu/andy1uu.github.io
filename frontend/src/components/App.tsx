@@ -12,7 +12,7 @@ const App = () => {
   const buildPage = (page: React.ReactElement) => (
     <div className="Body text-text flex h-screen w-full font-primary">
       <NavBar />
-      <div className="PageContainer flex w-full flex-col overflow-auto bg-lightBackground text-darkText">
+      <div className="PageContainer flex w-full flex-col overflow-auto bg-darkBackground text-lightText">
         <Header />
         {page}
         <Footer />

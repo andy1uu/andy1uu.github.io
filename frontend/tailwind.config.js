@@ -9,19 +9,20 @@ module.exports = {
       colors: {
         darkText: "#041a10",
         lightText: "#fdf8ec",
-        darkBackground: "#041a10",
+        navBackground: "#252829",
         lightBackground: "#fdf8ec",
-        primary: "#1db954",
+        darkBackground: "#374151",
+        primary: "#32cc8c",
         secondary: "#fdf8ec",
-        tertiary: "#32cc8c",
-      },
+        tertiary: "#1db954"
+      }
     },
     fontFamily: {
-      primary: ["Rubik", "sans-serif"],
-    },
+      primary: ["Rubik", "sans-serif"]
+    }
   },
   variants: {
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 };
