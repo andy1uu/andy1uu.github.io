@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        rubik: ["var(--font-rubik)", ...fontFamily.sans]
+        rubik: ["var(--font-rubik)", ...fontFamily.sans],
       },
-      colors: { dark: "#1b1b1b", light: "#f5f5f5", primary: "#33b679" }
+      colors: { dark: "#081B12", light: "#E4F7EE", primary: "#33b679" },
     },
   },
-  plugins: []
+  plugins: [],
 };
