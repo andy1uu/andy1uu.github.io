@@ -40,7 +40,7 @@ const Education = async () => {
     <section className="About flex min-h-screen w-full items-center justify-center bg-light dark:bg-dark">
       {education.map((edu) => {
         return (
-          <div key={edu._id}>
+          <div key={edu._id as unknown as string}>
             {edu.major}
             {edu.institution}
             {edu.degreeType}
