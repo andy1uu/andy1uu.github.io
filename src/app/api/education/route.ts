@@ -1,11 +1,9 @@
-import { limiter } from "../config/limiter";
 import clientPromise from "../../../../lib/mongodb";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
-
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
     const education = await database
