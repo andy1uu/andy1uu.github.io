@@ -1,11 +1,19 @@
-//import { limiter } from "../config/limiter";
+import { limiter } from "../config/limiter";
 import clientPromise from "../../../../lib/mongodb";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
-/*     const origin = request.headers.get("origin");
+    const apiKey = request.headers.get("API-Key");
+
+    if (apiKey !== process.env.API_KEY) {
+      return new NextResponse(null, {
+        status: 401,
+        statusText: "Invalid API Key",
+        headers: { "Content-Type": "text/plain" },
+      });
+    }
 
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
@@ -15,11 +23,10 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
         status: 429,
         statusText: "Too Many Requests For This Session",
         headers: {
-          "Access-Control-Allow-Origin": origin || "*",
           "Content-Type": "text/plain",
         },
       });
-    } */
+    }
 
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
