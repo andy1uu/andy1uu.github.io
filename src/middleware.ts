@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 
 export const middleware = (request: NextRequest) => {
 
-  const apiKey = request.headers.get("API-Key");
+/*   const apiKey = request.headers.get("API-Key");
 
   if (apiKey !== process.env.API_KEY) {
     return new NextResponse(null, {
@@ -12,7 +12,7 @@ export const middleware = (request: NextRequest) => {
       headers: { "Content-Type": "application/json" },
     });
   }
-
+ */
   return NextResponse.next();
 };
 
