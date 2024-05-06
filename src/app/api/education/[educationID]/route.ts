@@ -45,7 +45,7 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
   }
 };
 
-export const POST = async (request: NextRequest, response: NextResponse) => {
+export const UPDATE = async (request: NextRequest, response: NextResponse) => {
   try {
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
@@ -61,7 +61,7 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
       });
     }
 
-    // Change this to post logic
+    // Change this to update logic
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
     const education = await database
