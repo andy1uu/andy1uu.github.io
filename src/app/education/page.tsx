@@ -5,7 +5,8 @@ import EducationAPI from "./api";
 
 async function getData() {
   return await EducationAPI.getEducation().then((response) => {
-    return response.data.education; 
+    console.log(response);
+    return response.data.education;
   });
 }
 
@@ -33,7 +34,6 @@ export const metadata: Metadata = {
 };
 
 const Education = async () => {
-
   const education: Education[] = await getData();
 
   return (
