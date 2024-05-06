@@ -1,6 +1,7 @@
 import { limiter } from "../config/limiter";
 import clientPromise from "../../../../lib/mongodb";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
@@ -29,6 +30,7 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
 
     return NextResponse.json({ message: "OK", education }, { status: 200 });
   } catch (error) {
+    console.log(error);
     return NextResponse.json({ message: "Error", error }, { status: 500 });
   }
 };

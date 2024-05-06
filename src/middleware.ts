@@ -8,7 +8,7 @@ export const middleware = (request: NextRequest) => {
     return new NextResponse(null, {
       status: 401,
       statusText: "Invalid API Key",
-      headers: { "Content-Type": "text/plain" },
+      headers: { "Content-Type": "application/json" },
     });
   }
 
