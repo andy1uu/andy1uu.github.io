@@ -1,4 +1,4 @@
-import clientPromise from "../../../../lib/mongodb";
+import clientPromise from "../../../../../lib/mongodb";
 import { limiter } from "@/app/limiter";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
