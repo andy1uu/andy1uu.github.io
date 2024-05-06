@@ -5,15 +5,6 @@ import type { NextRequest } from "next/server";
 
 export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
-    const apiKey = request.headers.get("API-Key");
-
-    if (apiKey !== process.env.API_KEY) {
-      return new NextResponse(null, {
-        status: 401,
-        statusText: "Invalid API Key",
-        headers: { "Content-Type": "text/plain" },
-      });
-    }
 
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
@@ -35,9 +26,20 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
       .find({})
       .toArray();
 
-    return NextResponse.json({ message: "OK", education }, { status: 200 });
+    return new NextResponse(JSON.stringify(education), {
+      status: 200,
+      statusText: "OK",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   } catch (error) {
-    console.log(error);
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return new NextResponse(JSON.stringify(error), {
+      status: 500,
+      statusText: "Internal Server Error",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 };

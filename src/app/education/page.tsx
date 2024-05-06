@@ -6,7 +6,7 @@ import EducationAPI from "./api";
 async function getData() {
   return await EducationAPI.getEducation().then((response) => {
     console.log(response);
-    return response.data.education;
+    return response.data;
   });
 }
 
