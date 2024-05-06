@@ -2,10 +2,15 @@ import clientPromise from "../../../../../lib/mongodb";
 import { limiter } from "@/app/limiter";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import type { Education } from "@/app/education/interfaces";
+import { ObjectId } from "mongodb";
 
-export const GET = async (request: NextRequest, response: NextResponse) => {
+export const GET = async (
+  request: NextRequest,
+  { params }: { params: { educationID: string } },
+  response: NextResponse,
+) => {
   try {
-
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
 
@@ -20,14 +25,15 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
       });
     }
 
+    const educationID = params.educationID;
+
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
-    const education = await database
+    const result = await database
       .collection(process.env.EDUCATION_DATABASE_NAME!)
-      .find({})
-      .toArray();
+      .findOne({ _id: new ObjectId(educationID) });
 
-    return new NextResponse(JSON.stringify(education), {
+    return new NextResponse(JSON.stringify(result), {
       status: 200,
       statusText: "OK",
       headers: {
@@ -45,7 +51,7 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
   }
 };
 
-export const PUT = async (request: NextRequest, response: NextResponse) => {
+export const PUT = async (request: NextRequest, { params }: { params: { educationID: string } }, response: NextResponse) => {
   try {
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
@@ -61,17 +67,18 @@ export const PUT = async (request: NextRequest, response: NextResponse) => {
       });
     }
 
-    // Change this to update logic
+    const educationID = params.educationID;
+
+    const updatedEducation: Education =
+      (await request.json()) as unknown as Education;
+
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
-    const education = await database
+    const result = await database
       .collection(process.env.EDUCATION_DATABASE_NAME!)
-      .find({})
-      .toArray();
+      .updateOne({ _id: new ObjectId(educationID) }, {$set: updatedEducation});
 
-
-
-    return new NextResponse(JSON.stringify(education), {
+    return new NextResponse(JSON.stringify(result), {
       status: 200,
       statusText: "OK",
       headers: {
@@ -89,7 +96,7 @@ export const PUT = async (request: NextRequest, response: NextResponse) => {
   }
 };
 
-export const DELETE = async (request: NextRequest, response: NextResponse) => {
+export const DELETE = async (request: NextRequest,{ params }: { params: { educationID: string } }, response: NextResponse) => {
   try {
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
@@ -105,15 +112,15 @@ export const DELETE = async (request: NextRequest, response: NextResponse) => {
       });
     }
 
-    // Change this to delete logic
+    const educationID = params.educationID;
+
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
-    const education = await database
+    const result = await database
       .collection(process.env.EDUCATION_DATABASE_NAME!)
-      .find({})
-      .toArray();
+      .deleteOne({ _id: new ObjectId(educationID) });
 
-    return new NextResponse(JSON.stringify(education), {
+    return new NextResponse(JSON.stringify(result), {
       status: 200,
       statusText: "OK",
       headers: {

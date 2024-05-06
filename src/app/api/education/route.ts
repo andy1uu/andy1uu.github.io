@@ -2,6 +2,7 @@ import clientPromise from "../../../../lib/mongodb";
 import { limiter } from "@/app/limiter";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import type { Education } from "@/app/education/interfaces";
 
 export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
@@ -60,8 +61,8 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
       });
     }
 
-    const newEducation: ReadableStream<Uint8Array> =
-      request.body as unknown as ReadableStream<Uint8Array>;
+    const newEducation: Education =
+      (await request.json()) as unknown as Education;
 
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
