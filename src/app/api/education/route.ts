@@ -2,10 +2,10 @@ import clientPromise from "../../../../lib/mongodb";
 import { limiter } from "@/app/limiter";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import type { Education } from "@/app/education/interfaces";
 
 export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
-
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
 
@@ -22,12 +22,12 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
 
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
-    const education = await database
+    const result = await database
       .collection(process.env.EDUCATION_DATABASE_NAME!)
       .find({})
       .toArray();
 
-    return new NextResponse(JSON.stringify(education), {
+    return new NextResponse(JSON.stringify(result), {
       status: 200,
       statusText: "OK",
       headers: {
@@ -61,19 +61,17 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
       });
     }
 
-    // Change this to post logic
+    const newEducation: Education = request.body as unknown as Education;
+
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
-    const education = await database
+    const result = await database
       .collection(process.env.EDUCATION_DATABASE_NAME!)
-      .find({})
-      .toArray();
+      .insertOne(newEducation);
 
-
-
-    return new NextResponse(JSON.stringify(education), {
-      status: 200,
-      statusText: "OK",
+    return new NextResponse(JSON.stringify(result), {
+      status: 201,
+      statusText: "Created",
       headers: {
         "Content-Type": "application/json",
       },
@@ -105,15 +103,13 @@ export const DELETE = async (request: NextRequest, response: NextResponse) => {
       });
     }
 
-    // Change this to delete logic
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
-    const education = await database
+    const result = await database
       .collection(process.env.EDUCATION_DATABASE_NAME!)
-      .find({})
-      .toArray();
+      .deleteMany({});
 
-    return new NextResponse(JSON.stringify(education), {
+    return new NextResponse(JSON.stringify(result), {
       status: 200,
       statusText: "OK",
       headers: {

@@ -45,7 +45,7 @@ export const GET = async (request: NextRequest, response: NextResponse) => {
   }
 };
 
-export const UPDATE = async (request: NextRequest, response: NextResponse) => {
+export const PUT = async (request: NextRequest, response: NextResponse) => {
   try {
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);

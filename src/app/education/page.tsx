@@ -2,29 +2,12 @@ import React from "react";
 import { ObjectId } from "mongodb";
 import type { Metadata } from "next";
 import EducationAPI from "./api";
+import type { Education } from "./interfaces";
 
 async function getData() {
   return await EducationAPI.getEducation().then((response) => {
     return response.data;
   });
-}
-
-interface CourseWork {
-  semester: string;
-  courses: string[];
-}
-
-interface Education {
-  _id: ObjectId;
-  institution: string;
-  degreeType: string;
-  gpa: number;
-  location: string;
-  major: string;
-  courseWork: CourseWork[];
-  extracirriculars: string[];
-  endTime: string;
-  startTime: string;
 }
 
 export const metadata: Metadata = {
