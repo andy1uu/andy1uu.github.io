@@ -4,16 +4,6 @@ import type { NextRequest } from "next/server";
 
 export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
-    const apiKey = request.headers.get("API_KEY");
-
-    if (apiKey !== process.env.REACT_APP_API_KEY) {
-      return new NextResponse(null, {
-        status: 401,
-        statusText: "Invalid API Key",
-        headers: { "Content-Type": "application/json" },
-      });
-    }
-
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
     const education = await database
