@@ -18,10 +18,10 @@ const RootLayout = ({
         <Providers>
           <main className="flex">
             <NavBar />
-            <div className="flex flex-col w-full">
-            <Header />
-            {children}
-            <Footer />
+            <div className="flex min-h-screen w-full flex-col bg-light dark:bg-dark">
+              <Header />
+              {children}
+              <Footer />
             </div>
           </main>
         </Providers>

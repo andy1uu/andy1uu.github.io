@@ -1,5 +1,4 @@
 import React from "react";
-import { ObjectId } from "mongodb";
 import type { Metadata } from "next";
 import EducationAPI from "./api";
 import type { Education } from "./interfaces";
@@ -19,7 +18,7 @@ const Education = async () => {
   const education: Education[] = await getData();
 
   return (
-    <section className="About flex min-h-screen w-full items-center justify-center bg-light dark:bg-dark">
+    <section className="Education flex w-full items-center justify-center bg-light dark:bg-dark p-8">
       {education.map((edu) => {
         return (
           <div key={edu._id as unknown as string}>
