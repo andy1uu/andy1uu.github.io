@@ -15,6 +15,8 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
   if (!mounted)
     return (
       <Button
+        disableRipple={true}
+        disableAnimation={true}
         isLoading={true}
         spinner={
           <svg
@@ -50,11 +52,13 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
   if (resolvedTheme === "dark") {
     return (
       <Button
+        disableRipple={true}
+        disableAnimation={true}
         isIconOnly={true}
-        onClick={() => setTheme("light")}
+        onPress={() => setTheme("light")}
         aria-label="Light"
         color="default"
-        className={`flex justify-start rounded-lg p-3 hover:bg-light md:w-full dark:hover:bg-dark ${expanded ? "w-full" : "w-12"}`}>
+        className={`flex justify-start rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
         <FaSun size={24} className=" text-light" />
         {
           <div
@@ -69,8 +73,10 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
   if (resolvedTheme === "light") {
     return (
       <Button
+        disableRipple={true}
+        disableAnimation={true}
         isIconOnly={true}
-        onClick={() => setTheme("dark")}
+        onPress={() => setTheme("dark")}
         aria-label="Dark"
         color="default"
         className={`flex justify-start rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>

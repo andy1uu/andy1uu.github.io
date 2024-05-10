@@ -15,7 +15,9 @@ const NavBarExpander = ({
     return (
       <Button
         isIconOnly={true}
-        onClick={() => setExpanded(true)}
+        disableRipple={true}
+        disableAnimation={true}
+        onPress={() => setExpanded(true)}
         aria-label="Expand"
         color="default"
         className="h-full w-5 md:hidden">
@@ -27,8 +29,10 @@ const NavBarExpander = ({
   if (expanded) {
     return (
       <Button
+        disableRipple={true}
+        disableAnimation={true}
         isIconOnly={true}
-        onClick={() => setExpanded(false)}
+        onPress={() => setExpanded(false)}
         aria-label="Unexpand"
         color="default"
         className="h-full w-10 md:hidden">

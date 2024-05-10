@@ -21,6 +21,8 @@ const NavBarLink = ({
     <Button
       as={Link}
       isIconOnly={true}
+      disableRipple={true}
+      disableAnimation={true}
       href={link}
       aria-label={label}
       color="default"
