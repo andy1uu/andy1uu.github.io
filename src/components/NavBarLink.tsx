@@ -2,7 +2,6 @@
 
 import { usePathname } from "next/navigation";
 import React, { ReactNode } from "react";
-import { Link, Button } from "@nextui-org/react";
 
 const NavBarLink = ({
   label,
