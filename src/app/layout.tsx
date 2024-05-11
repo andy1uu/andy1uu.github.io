@@ -16,9 +16,9 @@ const RootLayout = ({
     <html lang="en">
       <body className={rubik.className}>
         <Providers>
-          <main className="flex overflow-x-hidden">
+          <main className="flex overflow-x-hidden w-full">
             <NavBar />
-            <div className="flex min-h-screen w-full flex-col ml-24 md:ml-72 bg-light dark:bg-dark">
+            <div className="flex min-h-screen w-full flex-col ml-16 md:ml-72 bg-light dark:bg-dark">
               <Header />
               {children}
               <Footer />

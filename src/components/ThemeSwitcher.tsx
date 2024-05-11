@@ -54,7 +54,6 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
       <button
         onClick={() => setTheme("light")}
         aria-label="Light"
-        color="default"
         className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
         <FaSun size={24} className="my-auto text-light" />
         {
@@ -72,7 +71,6 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
       <button
         onClick={() => setTheme("dark")}
         aria-label="Dark"
-        color="default"
         className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
         <FaMoon size={24} className="my-auto text-dark" />
         {

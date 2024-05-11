@@ -57,22 +57,21 @@ const NavBar = () => {
 
   return (
     <div
-      className={`NavBar fixed flex min-h-screen bg-primary md:w-72 ${expanded ? "w-full" : "w-24"}`}>
-      <div className={`NavBar flex w-full flex-col gap-2 p-2`}>
-        <ThemeSwitcher expanded={expanded} />
+      className={`NavBar fixed flex min-h-screen flex-col gap-2 bg-primary p-2 md:w-72 ${expanded ? "w-2/3" : "w-16"}`}>
+      <ThemeSwitcher expanded={expanded} />
 
-        {navBarLinks.map((navBarLink) => {
-          return (
-            <NavBarLink
-              key={navBarLink.keyProp}
-              label={navBarLink.label}
-              link={navBarLink.link}
-              icon={navBarLink.icon}
-              expanded={expanded}
-            />
-          );
-        })}
-      </div>
+      {navBarLinks.map((navBarLink) => {
+        return (
+          <NavBarLink
+            key={navBarLink.keyProp}
+            label={navBarLink.label}
+            link={navBarLink.link}
+            icon={navBarLink.icon}
+            expanded={expanded}
+          />
+        );
+      })}
+
       <NavBarExpander expanded={expanded} setExpanded={setExpanded} />
     </div>
   );
