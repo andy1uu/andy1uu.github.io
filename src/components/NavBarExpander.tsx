@@ -14,7 +14,7 @@ const NavBarExpander = ({
         onClick={() => setExpanded(true)}
         aria-label="Expand"
         color="default"
-        className="mx-1 w-5 md:hidden">
+        className="mr-1 w-5 md:hidden">
         <FaAngleRight size={24} className=" text-dark dark:text-light" />
       </button>
     );
@@ -26,7 +26,7 @@ const NavBarExpander = ({
         onClick={() => setExpanded(false)}
         aria-label="Unexpand"
         color="default"
-        className="mx-1 w-10 md:hidden">
+        className="mr-1 w-10 md:hidden">
         <FaAngleLeft size={48} className=" text-dark dark:text-light" />
       </button>
     );

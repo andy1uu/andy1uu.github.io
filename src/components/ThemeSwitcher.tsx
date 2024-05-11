@@ -55,11 +55,11 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
         onClick={() => setTheme("light")}
         aria-label="Light"
         color="default"
-        className={`flex justify-start rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
-        <FaSun size={24} className=" text-light" />
+        className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
+        <FaSun size={24} className="my-auto text-light" />
         {
           <div
-            className={`text-2xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
+            className={`my-auto text-xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
             Light Mode
           </div>
         }
@@ -73,11 +73,11 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
         onClick={() => setTheme("dark")}
         aria-label="Dark"
         color="default"
-        className={`flex justify-start rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
-        <FaMoon size={24} className=" text-dark" />
+        className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
+        <FaMoon size={24} className="my-auto text-dark" />
         {
           <div
-            className={`text-2xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
+            className={`my-auto text-xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
             Dark Mode
           </div>
         }
