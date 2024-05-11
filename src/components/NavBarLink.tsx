@@ -18,23 +18,19 @@ const NavBarLink = ({
   const pathname = usePathname();
 
   return (
-    <Button
-      as={Link}
-      isIconOnly={true}
-      disableRipple={true}
-      disableAnimation={true}
+    <a
       href={link}
       aria-label={label}
       color="default"
-      className={`flex justify-start rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"} ${pathname === link && "bg-light dark:bg-dark"}`}>
+      className={`flex justify-start gap-2 rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"} ${pathname === link && "bg-light dark:bg-dark"}`}>
       {icon}
       {
         <div
-          className={`text-2xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
+          className={`my-auto text-xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
           {label}
         </div>
       }
-    </Button>
+    </a>
   );
 };
 

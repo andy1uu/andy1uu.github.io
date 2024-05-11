@@ -18,37 +18,37 @@ const navBarLinks = [
     keyProp: "home",
     label: "Home",
     link: "/",
-    icon: <FaHouseChimney size={24} />,
+    icon: <FaHouseChimney size={24} className="my-auto" />,
   },
   {
     keyProp: "about",
     label: "About",
     link: "/about",
-    icon: <FaAddressCard size={24} />,
+    icon: <FaAddressCard size={24} className="my-auto" />,
   },
   {
     keyProp: "education",
     label: "Education",
     link: "/education",
-    icon: <FaGraduationCap size={24} />,
+    icon: <FaGraduationCap size={24} className="my-auto" />,
   },
   {
     keyProp: "experience",
     label: "Experience",
     link: "/experience",
-    icon: <FaSuitcase size={24} />,
+    icon: <FaSuitcase size={24} className="my-auto" />,
   },
   {
     keyProp: "projects",
     label: "Projects",
     link: "/projects",
-    icon: <FaCode size={24} />,
+    icon: <FaCode size={24} className="my-auto" />,
   },
   {
     keyProp: "contact",
     label: "Contact",
     link: "/contact",
-    icon: <FaEnvelope size={24} />,
+    icon: <FaEnvelope size={24} className="my-auto" />,
   },
 ];
 
@@ -57,9 +57,8 @@ const NavBar = () => {
 
   return (
     <div
-      className={`NavBar flex h-screen bg-primary md:static md:w-72 ${expanded && "absolute w-full"}`}>
-      <div
-        className={`NavBar flex flex-col justify-center gap-2 p-2 w-full`}>
+      className={`NavBar fixed flex min-h-screen bg-primary md:w-72 ${expanded ? "w-full" : "w-24"}`}>
+      <div className={`NavBar flex w-full flex-col gap-2 p-2`}>
         <ThemeSwitcher expanded={expanded} />
 
         {navBarLinks.map((navBarLink) => {

@@ -18,7 +18,7 @@ const RootLayout = ({
         <Providers>
           <main className="flex">
             <NavBar />
-            <div className="flex min-h-screen w-full flex-col bg-light dark:bg-dark">
+            <div className="flex min-h-screen w-full flex-col ml-24 md:ml-72 bg-light dark:bg-dark">
               <Header />
               {children}
               <Footer />

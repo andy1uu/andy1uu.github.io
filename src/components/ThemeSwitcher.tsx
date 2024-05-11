@@ -51,11 +51,8 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
 
   if (resolvedTheme === "dark") {
     return (
-      <Button
-        disableRipple={true}
-        disableAnimation={true}
-        isIconOnly={true}
-        onPress={() => setTheme("light")}
+      <button
+        onClick={() => setTheme("light")}
         aria-label="Light"
         color="default"
         className={`flex justify-start rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
@@ -66,17 +63,14 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
             Light Mode
           </div>
         }
-      </Button>
+      </button>
     );
   }
 
   if (resolvedTheme === "light") {
     return (
-      <Button
-        disableRipple={true}
-        disableAnimation={true}
-        isIconOnly={true}
-        onPress={() => setTheme("dark")}
+      <button
+        onClick={() => setTheme("dark")}
         aria-label="Dark"
         color="default"
         className={`flex justify-start rounded-lg p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
@@ -87,7 +81,7 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
             Dark Mode
           </div>
         }
-      </Button>
+      </button>
     );
   }
 };
