@@ -13,36 +13,38 @@ import {
 } from "react-icons/fa6";
 import NavBarLink from "./NavBarLink";
 
+const iconSize = 24;
+
 const navBarLinks = [
   {
     keyProp: "home",
     label: "Home",
     link: "/",
-    icon: <FaHouseChimney size={24} className="my-auto" />,
+    icon: <FaHouseChimney size={iconSize} className="my-auto" />,
   },
   {
     keyProp: "about",
     label: "About",
     link: "/about",
-    icon: <FaAddressCard size={24} className="my-auto" />,
+    icon: <FaAddressCard size={iconSize} className="my-auto" />,
   },
   {
     keyProp: "education",
     label: "Education",
     link: "/education",
-    icon: <FaGraduationCap size={24} className="my-auto" />,
+    icon: <FaGraduationCap size={iconSize} className="my-auto" />,
   },
   {
     keyProp: "experience",
     label: "Experience",
     link: "/experience",
-    icon: <FaSuitcase size={24} className="my-auto" />,
+    icon: <FaSuitcase size={iconSize} className="my-auto" />,
   },
   {
     keyProp: "projects",
     label: "Projects",
     link: "/projects",
-    icon: <FaCode size={24} className="my-auto" />,
+    icon: <FaCode size={iconSize} className="my-auto" />,
   },
   {
     keyProp: "contact",

@@ -5,14 +5,14 @@ export const metadata: Metadata = {
   title: "Create Next App",
   description: "This is a base site for Andy to create his websites.",
 };
-const About = () => {
+const Contact = () => {
   return (
     <section className="About flex min-h-screen w-full items-center justify-center bg-light dark:bg-dark">
-      <h1 className="Homepage-text text-8xl font-bold text-dark dark:text-light text-center">
+      <h1 className="Homepage-text text-center text-8xl font-bold text-dark dark:text-light">
         About Page
       </h1>
     </section>
   );
 };
 
-export default About;
+export default Contact;
