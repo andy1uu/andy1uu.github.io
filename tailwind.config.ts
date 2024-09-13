@@ -9,7 +9,13 @@ module.exports = {
       fontFamily: {
         rubik: ["var(--font-rubik)", ...fontFamily.sans],
       },
-      colors: { dark: "#081B12", light: "#E4F7EE", primary: "#33b679" },
+      colors: {
+        dark: "#0D1310",
+        light: "#ECEFEE",
+        primary: "#33B679",
+        secondary: "#148E66",
+        tertiary: "#17F5AB",
+      },
     },
   },
   plugins: [],

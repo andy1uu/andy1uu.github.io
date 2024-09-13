@@ -1,6 +1,16 @@
+interface Extracirricular {
+  name: string;
+  affiliation: string;
+}
+
+interface Course {
+  name: string;
+  professor: string;
+}
+
 interface CourseWork {
   semester: string;
-  courses: string[];
+  courses: Course[];
 }
 
 export interface Education {
@@ -11,7 +21,7 @@ export interface Education {
   location: string;
   major: string;
   courseWork: CourseWork[];
-  extracirriculars: string[];
+  extracirriculars: Extracirricular[];
   endTime: string;
   startTime: string;
 }
