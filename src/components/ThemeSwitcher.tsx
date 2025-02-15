@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
 
-const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
+const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -41,11 +41,7 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
         }
         aria-label="Loading"
         color="default"
-        className={`flex justify-start rounded-lg p-3 md:w-full ${expanded ? "w-full" : "w-12"}`}>
-        <div
-          className={`text-2xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
-          Loading
-        </div>
+        className={`flex justify-start rounded-lg p-3 md:w-full`}>
       </Button>
     );
 
@@ -54,14 +50,8 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
       <button
         onClick={() => setTheme("light")}
         aria-label="Light"
-        className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
+        className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark`}>
         <FaSun size={24} className="my-auto text-light" />
-        {
-          <div
-            className={`my-auto text-xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
-            Light Mode
-          </div>
-        }
       </button>
     );
   }
@@ -71,14 +61,8 @@ const ThemeSwitcher = ({ expanded }: { expanded: boolean }) => {
       <button
         onClick={() => setTheme("dark")}
         aria-label="Dark"
-        className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark md:w-full ${expanded ? "w-full" : "w-12"}`}>
+        className={`flex justify-start rounded-lg gap-2 p-3 hover:bg-light dark:hover:bg-dark`}>
         <FaMoon size={24} className="my-auto text-dark" />
-        {
-          <div
-            className={`my-auto text-xl font-semibold md:block ${expanded ? "block" : "hidden"}`}>
-            Dark Mode
-          </div>
-        }
       </button>
     );
   }

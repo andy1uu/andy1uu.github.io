@@ -10,7 +10,7 @@ module.exports = {
         rubik: ["var(--font-rubik)", ...fontFamily.sans],
       },
       colors: {
-        dark: "#0D1310",
+        dark: "#374151",
         light: "#ECEFEE",
         primary: "#33B679",
         secondary: "#148E66",

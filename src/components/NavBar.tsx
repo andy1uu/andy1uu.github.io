@@ -1,15 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
-import NavBarExpander from "./NavBarExpander";
 import {
   FaHouseChimney,
-  FaAddressCard,
-  FaGraduationCap,
-  FaSuitcase,
-  FaCode,
-  FaEnvelope,
 } from "react-icons/fa6";
 import NavBarLink from "./NavBarLink";
 
@@ -21,12 +15,6 @@ const navBarLinks = [
     label: "Home",
     link: "/",
     icon: <FaHouseChimney size={iconSize} className="my-auto" />,
-  },
-  {
-    keyProp: "about",
-    label: "About",
-    link: "/about",
-    icon: <FaAddressCard size={iconSize} className="my-auto" />,
   },
   // {
   //   keyProp: "education",
@@ -54,17 +42,11 @@ const navBarLinks = [
   // },
 ];
 
-const NavBar = ({
-  expanded,
-  setExpanded,
-}: {
-  expanded: boolean;
-  setExpanded: Function;
-}) => {
+const NavBar = () => {
   return (
     <div
-      className={`NavBar flex min-h-screen flex-col gap-2 bg-primary p-2 md:w-72 ${expanded ? "absolute w-2/3" : "w-16"}`}>
-      <ThemeSwitcher expanded={expanded} />
+      className={`NavBar flex min-h-screen flex-col gap-2 bg-primary p-2`}>
+      <ThemeSwitcher />
 
       {navBarLinks.map((navBarLink) => {
         return (
@@ -73,12 +55,9 @@ const NavBar = ({
               label={navBarLink.label}
               link={navBarLink.link}
               icon={navBarLink.icon}
-              expanded={expanded}
             />
         );
       })}
-
-      <NavBarExpander expanded={expanded} setExpanded={setExpanded} />
     </div>
   );
 };
