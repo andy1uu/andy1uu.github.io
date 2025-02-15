@@ -28,30 +28,30 @@ const navBarLinks = [
     link: "/about",
     icon: <FaAddressCard size={iconSize} className="my-auto" />,
   },
-  {
-    keyProp: "education",
-    label: "Education",
-    link: "/education",
-    icon: <FaGraduationCap size={iconSize} className="my-auto" />,
-  },
-  {
-    keyProp: "experience",
-    label: "Experience",
-    link: "/experience",
-    icon: <FaSuitcase size={iconSize} className="my-auto" />,
-  },
-  {
-    keyProp: "projects",
-    label: "Projects",
-    link: "/projects",
-    icon: <FaCode size={iconSize} className="my-auto" />,
-  },
-  {
-    keyProp: "contact",
-    label: "Contact",
-    link: "/contact",
-    icon: <FaEnvelope size={24} className="my-auto" />,
-  },
+  // {
+  //   keyProp: "education",
+  //   label: "Education",
+  //   link: "/education",
+  //   icon: <FaGraduationCap size={iconSize} className="my-auto" />,
+  // },
+  // {
+  //   keyProp: "experience",
+  //   label: "Experience",
+  //   link: "/experience",
+  //   icon: <FaSuitcase size={iconSize} className="my-auto" />,
+  // },
+  // {
+  //   keyProp: "projects",
+  //   label: "Projects",
+  //   link: "/projects",
+  //   icon: <FaCode size={iconSize} className="my-auto" />,
+  // },
+  // {
+  //   keyProp: "contact",
+  //   label: "Contact",
+  //   link: "/contact",
+  //   icon: <FaEnvelope size={24} className="my-auto" />,
+  // },
 ];
 
 const NavBar = ({
