@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="Header flex h-16 w-full items-center justify-between  bg-light px-4 py-2 dark:bg-dark">
+    <header className="Header pl-[104px] flex h-16 w-full items-center justify-between  bg-light px-4 py-2 dark:bg-dark">
       <h1 className="text-3xl font-bold text-primary">Andy Luu</h1>
       <a
         className="Header-ResumeButton flex rounded-full bg-primary px-6 py-2 text-lg font-bold text-dark dark:text-light"

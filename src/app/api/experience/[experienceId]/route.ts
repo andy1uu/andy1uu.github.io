@@ -6,7 +6,7 @@ import { ObjectId } from "mongodb";
 
 export const GET = async (
   request: NextRequest,
-  { params }: { params: { educationId: string } },
+  { params }: { params: { experienceId: string } },
   response: NextResponse,
 ) => {
   try {
@@ -24,13 +24,13 @@ export const GET = async (
       });
     }
 
-    const educationId = params.educationId;
+    const experienceId = params.experienceId;
 
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
     const result = await database
-      .collection(process.env.EDUCATION_DATABASE_NAME!)
-      .findOne({ _id: new ObjectId(educationId) });
+      .collection(process.env.EXPERIENCE_DATABASE_NAME!)
+      .findOne({ _id: new ObjectId(experienceId) });
 
     return new NextResponse(JSON.stringify(result), {
       status: 200,

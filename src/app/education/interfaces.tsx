@@ -1,3 +1,5 @@
+import { ObjectId } from "mongodb";
+
 interface Extracirricular {
   name: string;
   affiliation: string;

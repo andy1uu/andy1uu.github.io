@@ -10,15 +10,15 @@ async function getData() {
 }
 
 export const metadata: Metadata = {
-  title: "Create Next App",
-  description: "This is a base site for Andy to create his websites.",
+  title: "Andy Luu's Education",
+  description: "These are the schools that Andy has graduated from.",
 };
 
 const Education = async () => {
   const education: Education[] = await getData();
 
   return (
-    <section className="Education-container flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
+    <section className="Education-container pl-[104px] flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
       {education.map((edu) => {
         return (
           <div

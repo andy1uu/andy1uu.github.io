@@ -4,7 +4,8 @@ import React from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
 import {
   FaHouseChimney,
-  FaGraduationCap
+  FaGraduationCap,
+  FaSuitcase
 } from "react-icons/fa6";
 import NavBarLink from "./NavBarLink";
 
@@ -23,12 +24,12 @@ const navBarLinks = [
     link: "/education",
     icon: <FaGraduationCap size={iconSize} className="my-auto" />,
   },
-  // {
-  //   keyProp: "experience",
-  //   label: "Experience",
-  //   link: "/experience",
-  //   icon: <FaSuitcase size={iconSize} className="my-auto" />,
-  // },
+  {
+    keyProp: "experience",
+    label: "Experience",
+    link: "/experience",
+    icon: <FaSuitcase size={iconSize} className="my-auto" />,
+  },
   // {
   //   keyProp: "projects",
   //   label: "Projects",
@@ -46,7 +47,7 @@ const navBarLinks = [
 const NavBar = () => {
   return (
     <div
-      className={`NavBar flex min-h-screen flex-col gap-2 bg-primary p-2`}>
+      className={`NavBar fixed flex min-h-screen flex-col gap-2 bg-primary p-2`}>
       <ThemeSwitcher />
 
       {navBarLinks.map((navBarLink) => {

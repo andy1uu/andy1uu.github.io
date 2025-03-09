@@ -1,21 +1,16 @@
 import baseAPI from "../api/api";
 
-const create = () => {
-  return baseAPI.post("/education");
-};
-
 const getEducation = () => {
   return baseAPI.get("/education");
 };
 
-const getEducationByID = (educationID: string) => {
-  return baseAPI.get(`/education/${educationID}`);
+const getEducationById = (educationId: string) => {
+  return baseAPI.get(`/education/${educationId}`);
 };
 
 const EducationAPI = {
-  create,
   getEducation,
-  getEducationByID,
+  getEducationById,
 };
 
 export default EducationAPI;

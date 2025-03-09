@@ -1,14 +1,9 @@
-import clientPromise from "../../../../../lib/mongodb";
+import clientPromise from "../../../../lib/mongodb";
 import { limiter } from "@/app/limiter";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { ObjectId } from "mongodb";
 
-export const GET = async (
-  request: NextRequest,
-  { params }: { params: { educationId: string } },
-  response: NextResponse,
-) => {
+export const GET = async (request: NextRequest, response: NextResponse) => {
   try {
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);
@@ -24,13 +19,12 @@ export const GET = async (
       });
     }
 
-    const educationId = params.educationId;
-
     const client = await clientPromise;
     const database = client.db(process.env.DATABASE_NAME);
     const result = await database
-      .collection(process.env.EDUCATION_DATABASE_NAME!)
-      .findOne({ _id: new ObjectId(educationId) });
+      .collection(process.env.EXPERIENCE_DATABASE_NAME!)
+      .find({})
+      .toArray();
 
     return new NextResponse(JSON.stringify(result), {
       status: 200,
@@ -49,4 +43,3 @@ export const GET = async (
     });
   }
 };
-

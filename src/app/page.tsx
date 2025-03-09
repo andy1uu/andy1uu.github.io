@@ -12,7 +12,7 @@ import SocialLink from "@/components/SocialLink";
 
 export const metadata: Metadata = {
   title: "Andy Luu's Personal Portfolio Website",
-  description: "This is a personal portfolio website for Andy Luu to show off his professional accomplishments.",
+  description: "This is a personal portfolio website for Andy Luu to show off his accomplishments.",
 };
 
 const iconSize = 48;
@@ -47,7 +47,7 @@ const socialLinks = [
 
 const Home = () => {
   return (
-    <section className="Homepage flex w-full flex-col bg-light p-8 text-primary gap-8 dark:bg-dark xl:flex-row-reverse">
+    <section className="Homepage pl-[104px] flex w-full flex-col bg-light p-8 text-primary gap-8 dark:bg-dark xl:flex-row-reverse">
       <Image
         src="/Profile_Luu_Andy_Square.jpg"
         width={2048}
