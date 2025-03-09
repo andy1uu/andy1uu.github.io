@@ -4,10 +4,11 @@ import React from "react";
 import ThemeSwitcher from "./ThemeSwitcher";
 import {
   FaHouseChimney,
+  FaGraduationCap
 } from "react-icons/fa6";
 import NavBarLink from "./NavBarLink";
 
-const iconSize = 24;
+const iconSize = 32;
 
 const navBarLinks = [
   {
@@ -16,12 +17,12 @@ const navBarLinks = [
     link: "/",
     icon: <FaHouseChimney size={iconSize} className="my-auto" />,
   },
-  // {
-  //   keyProp: "education",
-  //   label: "Education",
-  //   link: "/education",
-  //   icon: <FaGraduationCap size={iconSize} className="my-auto" />,
-  // },
+  {
+    keyProp: "education",
+    label: "Education",
+    link: "/education",
+    icon: <FaGraduationCap size={iconSize} className="my-auto" />,
+  },
   // {
   //   keyProp: "experience",
   //   label: "Experience",

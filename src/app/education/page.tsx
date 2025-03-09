@@ -18,7 +18,7 @@ const Education = async () => {
   const education: Education[] = await getData();
 
   return (
-    <section className="Education-container flex w-full items-center justify-center bg-light p-8 dark:bg-dark">
+    <section className="Education-container flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
       {education.map((edu) => {
         return (
           <div
@@ -35,35 +35,7 @@ const Education = async () => {
               {edu.startTime} - {edu.endTime}
             </p>
             <p>{edu.location}</p>
-            <p>GPA: {(Math.round(edu.gpa * 100) / 100).toFixed(2)}/4.00</p>
-            <h2 className="text-secondary dark:text-tertiary text-xl font-semibold">
-              Coursework:
-            </h2>
-            {edu.courseWork.map((semester) => {
-              return (
-                <div key={semester.semester}>
-                  <h3 className="text-lg font-medium">{semester.semester}:</h3>
-                  {semester.courses.map((course) => {
-                    return (
-                      <div key={course.name}>
-                        {course.name} {course.professor}
-                      </div>
-                    );
-                  })}
-                </div>
-              );
-            })}
-            <h2 className="text-secondary dark:text-tertiary text-xl font-semibold">
-              Extracirriculars:
-            </h2>
-            {edu.extracirriculars.map((extracirricular) => {
-              return (
-                <div key={extracirricular.name}>
-                  {extracirricular.name}
-                  {extracirricular.affiliation}
-                </div>
-              );
-            })}
+            <p>GPA: {(edu.gpa).toFixed(2)}/4.00</p>
           </div>
         );
       })}
