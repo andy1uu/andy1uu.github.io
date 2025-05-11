@@ -1,7 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
-import EducationAPI from "./api";
-import type { Education } from "./interfaces";
+import EducationAPI from "../api/education/api";
+import type { Education } from "./util/interfaces";
+import EducationCard from "./components/educationCard";
 
 async function getData() {
   return await EducationAPI.getEducation().then((response) => {
@@ -21,22 +22,18 @@ const Education = async () => {
     <section className="Education-container pl-[104px] flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
       {education.map((edu) => {
         return (
-          <div
-            key={edu._id as unknown as string}
-            className="Education w-full rounded-xl border border-primary border-2 p-4 xl:w-4/5 2xl:w-3/5">
-            <h1 className="text-2xl font-semibold text-primary">
-              {edu.institution}
-            </h1>
-            <h2 className="text-secondary dark:text-tertiary text-xl font-semibold">
-              {edu.degreeType}
-            </h2>
-            <h3 className="text-lg font-medium">{edu.major}</h3>
-            <p>
-              {edu.startTime} - {edu.endTime}
-            </p>
-            <p>{edu.location}</p>
-            <p>GPA: {(edu.gpa).toFixed(2)}/4.00</p>
-          </div>
+          <EducationCard 
+            key={edu._id.toString()} 
+            institution={edu.institution} 
+            degreeType={edu.degreeType} 
+            gpa={edu.gpa} 
+            location={edu.location} 
+            major={edu.major} 
+            courseWork={edu.courseWork} 
+            extracirriculars={edu.extracirriculars} 
+            endTime={edu.endTime} 
+            startTime={edu.startTime} 
+          />
         );
       })}
     </section>

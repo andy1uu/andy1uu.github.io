@@ -1,4 +1,4 @@
-import baseAPI from "../api/api";
+import baseAPI from "../api";
 
 const getEducation = () => {
   return baseAPI.get("/education");

@@ -9,13 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.3.6",
+    "@nextui-org/react": "^2.6.11",
     "axios": "^1.6.8",
     "framer-motion": "^11.1.9",
     "limiter": "^2.1.0",
     "mongodb": "^6.5.0",
-    "next": "^14.2.3",
-    "next-themes": "^0.2.1",
+    "next": "^15.3.2",
+    "next-themes": "^0.4.6",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "react": "^18",

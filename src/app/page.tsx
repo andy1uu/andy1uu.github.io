@@ -47,15 +47,8 @@ const socialLinks = [
 
 const Home = () => {
   return (
-    <section className="Homepage pl-[104px] flex w-full flex-col bg-light p-8 text-primary gap-8 dark:bg-dark xl:flex-row-reverse">
-      <Image
-        src="/Profile_Luu_Andy_Square.jpg"
-        width={2048}
-        height={2048}
-        alt="Picture of Andy Luu"
-        className="Homepage-image mx-auto my-4 mb-4 w-3/4 rounded-full lg:h-[512px] lg:w-[512px] xl:my-auto 2xl:h-[720px] 2xl:w-[720px]"
-      />
-      <div className="Homepage-textAndSocial flex flex-col justify-center 2xl:w-1/2">
+    <section className="Homepage pl-[104px] flex w-full flex-col bg-light p-8 text-primary gap-8 dark:bg-dark">
+      <div className="Homepage-textAndSocial flex flex-col justify-center 2xl:w-[720px] mx-auto">
         <div className="Homepage-begin mb-2 text-xl text-dark dark:text-light lg:text-2xl">
           Hello World! I'm
         </div>
@@ -86,6 +79,13 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Image
+        src="/Profile_Luu_Andy_Square.jpg"
+        width={2048}
+        height={2048}
+        alt="Picture of Andy Luu"
+        className="Homepage-image mx-auto my-4 mb-4 w-3/4 rounded-full lg:h-[512px] lg:w-[512px] xl:my-auto 2xl:h-[720px] 2xl:w-[720px]"
+      />
     </section>
   );
 };

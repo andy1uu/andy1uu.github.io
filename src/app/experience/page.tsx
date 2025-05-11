@@ -1,7 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
-import ExperienceAPI from "./api";
-import type { Experience } from "./interfaces";
+import ExperienceAPI from "../api/experience/api";
+import type { Experience } from "./util/interfaces";
+import ExperienceCard from "./components/experienceCard";
 
 async function getData() {
   return await ExperienceAPI.getExperience().then((response) => {
@@ -21,26 +22,14 @@ const Experience = async () => {
     <section className="Experience-container pl-[104px] flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
       {experiences.map((experience) => {
         return (
-          <div
-            key={experience._id as unknown as string}
-            className="Experience w-full rounded-xl border border-primary border-2 p-4 xl:w-4/5 2xl:w-3/5">
-            <h1 className="text-2xl font-semibold text-primary">
-              {experience.title}
-            </h1>
-            <h2 className="text-secondary dark:text-tertiary text-xl font-semibold">
-              {experience.company}
-            </h2>
-            <p>
-              {experience.startTime} - {experience.endTime}
-            </p>
-            <p>{experience.location}</p>
-            <ul className="list-disc">
-            {experience.responsibilities.map((responsibility) => {return (<li className="list-inside">{responsibility}</li>)})}
-            </ul>
-            <ul className="list-disc">
-            {experience.skills.map((skill) => {return (<li className="list-inside">{skill}</li>)})}
-            </ul>
-          </div>
+          <ExperienceCard             
+            key={experience._id.toString()}
+            company={experience.company}
+            title={experience.title} location={experience.location}
+            endTime={experience.endTime}
+            startTime={experience.startTime}
+            responsibilities={experience.responsibilities}
+            skills={experience.skills}          />
         );
       })}
     </section>
