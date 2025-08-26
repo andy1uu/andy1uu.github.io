@@ -9,6 +9,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
+import { Analytics } from "@vercel/analytics/next"
+
 import "./globals.css";
 
 const comfortaa = Comfortaa({ subsets: ["latin"], display: "swap" });
@@ -36,6 +38,7 @@ const RootLayout = ({
           </div>
         </main>
       </Providers>
+      <Analytics />
     </body>
   </html>
 );
