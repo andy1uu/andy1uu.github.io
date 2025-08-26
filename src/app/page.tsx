@@ -40,39 +40,63 @@ const socialLinks = [
 ];
 
 const Home = () => (
-  <section
-    className="Homepage flex flex-grow">
+  <section className="Homepage flex flex-grow">
     <div className="Homepage-container flex flex-col xl:flex-row w-full gap-8 xl:w-9/10 xl:mx-auto">
       <div className="Homepage-textAndSocials align-self-center flex flex-col gap-8 w-full px-16 pt-16 xl:my-auto xl:w-1/2">
-        <motion.p variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0}}} 
-    initial="hidden"
-    animate="visible"
-    transition={{ duration: 1, ease: "easeIn" }} className="Homepage-begin font-semibold text-2xl text-center xl:text-left">
+        <motion.p
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1, ease: "easeIn" }}
+          className="Homepage-begin font-semibold text-2xl text-center xl:text-left">
           Hello World! I&apos;m
         </motion.p>
-        <motion.h2 variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0}}} 
-    initial="hidden"
-    animate="visible"
-    transition={{ duration: 1, delay: 0.2, ease: "easeIn" }} className="Homepage-name font-extrabold text-primary text-8xl text-center xl:text-left">
+        <motion.h2
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1, delay: 0.2, ease: "easeIn" }}
+          className="Homepage-name font-extrabold text-primary text-8xl text-center xl:text-left">
           <a href="/">Andy Luu</a>
         </motion.h2>
-        <motion.h3 variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0}}} 
-    initial="hidden"
-    animate="visible"
-    transition={{ duration: 1, delay: 0.4, ease: "easeIn" }} className="Homepage-title font-bold text-4xl text-secondary dark:text-tertiary text-center xl:text-left">
+        <motion.h3
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1, delay: 0.4, ease: "easeIn" }}
+          className="Homepage-title font-bold text-4xl text-secondary dark:text-tertiary text-center xl:text-left">
           Software Engineer focusing in HCI & FinTech
         </motion.h3>
-        <motion.p variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0}}} 
-    initial="hidden"
-    animate="visible"
-    transition={{ duration: 1, delay: 0.6, ease: "easeIn" }} className="Homepage-description font-semibold text-2xl text-center xl:text-left">
+        <motion.p
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1, delay: 0.6, ease: "easeIn" }}
+          className="Homepage-description font-semibold text-2xl text-center xl:text-left">
           I design digital interfaces for all different types of software while
           researching novel HCI solutions.
         </motion.p>
-        <motion.div variants={{ hidden: { opacity: 0, x: -100 }, visible: { opacity: 1, x: 0}}} 
-    initial="hidden"
-    animate="visible"
-    transition={{ duration: 1, delay: 0.8, ease: "easeIn" }}  className="Homepage-social w-full text-center xl:text-left flex flex-col gap-8 text-secondary dark:text-tertiary">
+        <motion.div
+          variants={{
+            hidden: { opacity: 0, x: -100 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1, delay: 0.8, ease: "easeIn" }}
+          className="Homepage-social w-full text-center xl:text-left flex flex-col gap-8 text-secondary dark:text-tertiary">
           <div className="Homepage-socialTitle font-extrabold text-4xl">
             Lets Connect!
           </div>
@@ -87,10 +111,15 @@ const Home = () => (
           </div>
         </motion.div>
       </div>
-      <motion.div variants={{ hidden: { opacity: 0, x:100}, visible: { opacity: 1,x:0}}} 
-    initial="hidden"
-    animate="visible"
-    transition={{ duration: 1, ease: "easeIn" }} className="Homepage-imageContainer xl:my-auto w-full xl:w-1/2">
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, x: 100 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 1, ease: "easeIn" }}
+        className="Homepage-imageContainer xl:my-auto w-full xl:w-1/2">
         <Image
           src="/Profile_Luu_Andy_Square.jpg"
           width={2048}
