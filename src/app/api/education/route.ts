@@ -3,7 +3,7 @@ import { limiter } from "@/app/limiter";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export const GET = async (request: NextRequest, response: NextResponse) => {
+export const GET = async (_request: NextRequest, _response: NextResponse) => {
   try {
     const remaining = await limiter.removeTokens(1);
     console.log("Remaining Tokens: " + remaining);

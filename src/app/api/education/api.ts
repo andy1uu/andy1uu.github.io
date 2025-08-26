@@ -1,12 +1,9 @@
 import baseAPI from "../api";
 
-const getEducation = () => {
-  return baseAPI.get("/education");
-};
+const getEducation = () => baseAPI.get("/education");
 
-const getEducationById = (educationId: string) => {
-  return baseAPI.get(`/education/${educationId}`);
-};
+const getEducationById = (educationId: string) =>
+  baseAPI.get(`/education/${educationId}`);
 
 const EducationAPI = {
   getEducation,

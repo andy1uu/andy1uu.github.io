@@ -5,9 +5,7 @@ import type { Education } from "./util/interfaces";
 import EducationCard from "./components/educationCard";
 
 async function getData() {
-  return await EducationAPI.getEducation().then((response) => {
-    return response.data;
-  });
+  return await EducationAPI.getEducation().then((response) => response.data);
 }
 
 export const metadata: Metadata = {
@@ -19,23 +17,21 @@ const Education = async () => {
   const education: Education[] = await getData();
 
   return (
-    <section className="Education-container pl-[104px] flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
-      {education.map((edu) => {
-        return (
-          <EducationCard 
-            key={edu._id.toString()} 
-            institution={edu.institution} 
-            degreeType={edu.degreeType} 
-            gpa={edu.gpa} 
-            location={edu.location} 
-            major={edu.major} 
-            courseWork={edu.courseWork} 
-            extracirriculars={edu.extracirriculars} 
-            endTime={edu.endTime} 
-            startTime={edu.startTime} 
-          />
-        );
-      })}
+    <section className="Education-container flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
+      {education.map((edu) => (
+        <EducationCard
+          key={edu._id.toString()}
+          institution={edu.institution}
+          degreeType={edu.degreeType}
+          gpa={edu.gpa}
+          location={edu.location}
+          major={edu.major}
+          courseWork={edu.courseWork}
+          extracirriculars={edu.extracirriculars}
+          endTime={edu.endTime}
+          startTime={edu.startTime}
+        />
+      ))}
     </section>
   );
 };

@@ -1,21 +1,21 @@
 import { ObjectId } from "mongodb";
 
-interface Extracirricular {
+type Extracirricular = {
   name: string;
   affiliation: string;
-}
+};
 
-interface Course {
+type Course = {
   name: string;
   professor: string;
-}
+};
 
-interface CourseWork {
+type CourseWork = {
   semester: string;
   courses: Course[];
-}
+};
 
-export interface Education {
+export type Education = {
   _id: ObjectId;
   institution: string;
   degreeType: string;
@@ -26,4 +26,4 @@ export interface Education {
   extracirriculars: Extracirricular[];
   endTime: string;
   startTime: string;
-}
+};

@@ -1,12 +1,12 @@
 import { ObjectId } from "mongodb";
 
-export interface Experience {
+export type Experience = {
   _id: ObjectId;
   company: string;
   title: string;
   location: string;
   endTime: string;
   startTime: string;
-  responsibilities: string[],
-  skills: string[],
-}
+  responsibilities: string[];
+  skills: string[];
+};

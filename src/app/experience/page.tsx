@@ -5,9 +5,7 @@ import type { Experience } from "./util/interfaces";
 import ExperienceCard from "./components/experienceCard";
 
 async function getData() {
-  return await ExperienceAPI.getExperience().then((response) => {
-    return response.data;
-  });
+  return await ExperienceAPI.getExperience().then((response) => response.data);
 }
 
 export const metadata: Metadata = {
@@ -19,19 +17,19 @@ const Experience = async () => {
   const experiences: Experience[] = await getData();
 
   return (
-    <section className="Experience-container pl-[104px] flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
-      {experiences.map((experience) => {
-        return (
-          <ExperienceCard             
-            key={experience._id.toString()}
-            company={experience.company}
-            title={experience.title} location={experience.location}
-            endTime={experience.endTime}
-            startTime={experience.startTime}
-            responsibilities={experience.responsibilities}
-            skills={experience.skills}          />
-        );
-      })}
+    <section className="Experience-container flex w-full flex-col gap-4 items-center justify-center bg-light p-8 dark:bg-dark">
+      {experiences.map((experience) => (
+        <ExperienceCard
+          key={experience._id.toString()}
+          company={experience.company}
+          title={experience.title}
+          location={experience.location}
+          endTime={experience.endTime}
+          startTime={experience.startTime}
+          responsibilities={experience.responsibilities}
+          skills={experience.skills}
+        />
+      ))}
     </section>
   );
 };

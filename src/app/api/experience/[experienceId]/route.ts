@@ -5,9 +5,9 @@ import type { NextRequest } from "next/server";
 import { ObjectId } from "mongodb";
 
 export const GET = async (
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { experienceId: string } },
-  response: NextResponse,
+  _response: NextResponse,
 ) => {
   try {
     const remaining = await limiter.removeTokens(1);
@@ -49,4 +49,3 @@ export const GET = async (
     });
   }
 };
-

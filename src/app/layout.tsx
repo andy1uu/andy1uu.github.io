@@ -1,38 +1,43 @@
-"use client"
-import { Rubik } from "next/font/google";
-import Providers from "./providers";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-import "./globals.css";
+import type, { Metadata } from "next";
+
+import { Comfortaa } from "next/font/google";
+
+import Providers from "./providers";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 
-const rubik = Rubik({ subsets: ["latin"], display: "swap" });
+import "./globals.css";
+
+const comfortaa = Comfortaa({ subsets: ["latin"], display: "swap" });
+
+export const metadata: Metadata = {
+  title: "Andy Luu's Personal Portfolio Website",
+  description:
+    "This is a personal portfolio website for Andy Luu to show off his accomplishments.",
+};
 
 const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) => {
-  const [expanded, setExpanded] = useState(false);
-
-  return (
-    <html lang="en">
-      <body className={rubik.className}>
-        <Providers>
-          <main className="flex min-h-screen w-full overflow-y-auto overflow-x-hidden">
-            <NavBar expanded={expanded} setExpanded={setExpanded} />
-            <div className={`flex w-full flex-col  bg-light dark:bg-dark ${expanded && "ml-16"}`}>
-              <Header />
-              {children}
-              <Footer />
-            </div>
-          </main>
-        </Providers>
-      </body>
-    </html>
-  );
-};
+}>) => (
+  <html lang="en">
+    <body className={comfortaa.className}>
+      <Providers>
+        <main className="flex min-h-screen w-full overflow-y-auto overflow-x-hidden">
+          <NavBar />
+          <div className="flex w-full flex-col  bg-light dark:bg-dark">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </main>
+      </Providers>
+    </body>
+  </html>
+);
 
 export default RootLayout;

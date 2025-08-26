@@ -1,12 +1,9 @@
 import baseAPI from "../api";
 
-const getExperience = () => {
-  return baseAPI.get("/experience");
-};
+const getExperience = () => baseAPI.get("/experience");
 
-const getExperienceById = (experienceId: string) => {
-  return baseAPI.get(`/experience/${experienceId}`);
-};
+const getExperienceById = (experienceId: string) =>
+  baseAPI.get(`/experience/${experienceId}`);
 
 const ExperienceAPI = {
   getExperience,

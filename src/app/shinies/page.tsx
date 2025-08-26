@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const Projects = () => (
   <section className="About flex min-h-screen w-full items-center justify-center bg-light dark:bg-dark">
     <h1 className="Homepage-text text-8xl text-center font-bold text-dark dark:text-light">
-      Projects Page (Coming Soon)
+      Shinies Page (Coming Soon)
     </h1>
   </section>
 );
