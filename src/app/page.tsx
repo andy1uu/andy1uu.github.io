@@ -125,7 +125,7 @@ const Home = () => (
           width={2048}
           height={2048}
           alt="Picture of Andy Luu"
-          className="Homepage-image rounded-full w-[400px] h-[400px] mx-auto xl:w-[500px] xl:h-[500px] 2xl:w-[700px] 2xl:h-[700px] border-8 border-primary"
+          className="Homepage-image rounded-full w-75 h-75 sm:w-100 sm:h-100 mx-auto xl:w-125 xl:h-125 2xl:w-175 2xl:h-175 border-8 border-primary"
         />
       </motion.div>
     </div>
