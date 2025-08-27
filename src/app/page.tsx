@@ -100,7 +100,7 @@ const Home = () => (
           <div className="Homepage-socialTitle font-extrabold text-5xl">
             Lets Connect!
           </div>
-          <div className="Homepage-socialLinks flex gap-2 w-fit mx-auto xl:ml-0">
+          <div className="Homepage-socialLinks flex flex-wrap justify-center gap-2 w-fit mx-auto xl:ml-0">
             {socialLinks.map((socialLink) => (
               <SocialLink
                 key={socialLink.keyProp}

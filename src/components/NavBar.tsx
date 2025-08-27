@@ -12,7 +12,7 @@ import {
 } from "react-icons/md";
 import NavBarLink from "./NavBarLink";
 
-const iconSize = 32;
+const iconSize = 28;
 
 const navBarLinks = [
   {
