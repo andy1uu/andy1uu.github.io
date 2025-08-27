@@ -9,7 +9,7 @@ import { MdEmail, MdFacebook } from "react-icons/md";
 
 import { motion } from "framer-motion";
 
-const iconSize = 48;
+const iconSize = 64;
 
 const socialLinks = [
   {
@@ -41,8 +41,8 @@ const socialLinks = [
 
 const Home = () => (
   <section className="Homepage flex flex-grow">
-    <div className="Homepage-container flex flex-col xl:flex-row w-full gap-8 xl:w-9/10 xl:mx-auto">
-      <div className="Homepage-textAndSocials align-self-center flex flex-col gap-8 w-full px-16 pt-16 xl:my-auto xl:w-1/2">
+    <div className="Homepage-container flex flex-col xl:flex-row w-full gap-12 xl:w-9/10 xl:mx-auto">
+      <div className="Homepage-textAndSocials align-self-center flex flex-col gap-12 w-full px-16 pt-16 xl:my-auto xl:w-1/2">
         <motion.p
           variants={{
             hidden: { opacity: 0, x: -100 },
@@ -51,7 +51,7 @@ const Home = () => (
           initial="hidden"
           animate="visible"
           transition={{ duration: 1, ease: "easeIn" }}
-          className="Homepage-begin font-semibold text-2xl text-center xl:text-left">
+          className="Homepage-begin font-semibold text-4xl text-center xl:text-left">
           Hello World! I&apos;m
         </motion.p>
         <motion.h2
@@ -62,7 +62,7 @@ const Home = () => (
           initial="hidden"
           animate="visible"
           transition={{ duration: 1, delay: 0.2, ease: "easeIn" }}
-          className="Homepage-name font-extrabold text-primary text-8xl text-center xl:text-left">
+          className="Homepage-name font-extrabold text-primary text-7xl text-center xl:text-left">
           <a href="/">Andy Luu</a>
         </motion.h2>
         <motion.h3
@@ -74,7 +74,7 @@ const Home = () => (
           animate="visible"
           transition={{ duration: 1, delay: 0.4, ease: "easeIn" }}
           className="Homepage-title font-bold text-4xl text-secondary dark:text-tertiary text-center xl:text-left">
-          Software Engineer focusing in HCI & FinTech
+          I&apos;m a Software Engineer focusing in HCI & FinTech!
         </motion.h3>
         <motion.p
           variants={{
@@ -97,7 +97,7 @@ const Home = () => (
           animate="visible"
           transition={{ duration: 1, delay: 0.8, ease: "easeIn" }}
           className="Homepage-social w-full text-center xl:text-left flex flex-col gap-8 text-secondary dark:text-tertiary">
-          <div className="Homepage-socialTitle font-extrabold text-4xl">
+          <div className="Homepage-socialTitle font-extrabold text-5xl">
             Lets Connect!
           </div>
           <div className="Homepage-socialLinks flex gap-2 w-fit mx-auto xl:ml-0">
